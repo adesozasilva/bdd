@@ -1,4 +1,4 @@
-Esse projeto ilustra o uso do padrão Factory Method.
+Esse projeto ilustra os princípios de Behavior Driven Development, utilizando da ferramenta cucumber para realizar diferentes cenários de testes.
 
 É criada uma API REST para exemplificar.
 
@@ -18,22 +18,19 @@ b) Windows
 2.2) Executar em Docker
 
 a) Criar a imagem: 
-> docker build -t pagamentoimg .
+> docker build -t paymentsimg .
 
 b) Rodar aplicação em conteiner: 
-> docker run --name pagamento -p 8080:8080 -d pagamentoimg
+> docker run --name payments -p 8080:8080 -d paymentsimg
 
 3) Exemplo de chamada no navegador:
-> http://localhost:8080/pagamento?tipo_pagamento=DINHEIRO&valor_pagamento=500
-> http://localhost:8080/pagamento?tipo_pagamento=CHEQUE&valor_pagamento=500
-> http://localhost:8080/pagamento?tipo_pagamento=DINHEIRO&valor_pagamento=500
+> http://localhost:8080/pagamento?tipo_pagamento=CARD&valor_pagamento=500
+> http://localhost:8080/pagamento?tipo_pagamento=CHECK&valor_pagamento=500
+> http://localhost:8080/pagamento?tipo_pagamento=CASH&valor_pagamento=500
     
 ### References
 
-* [Official Apache Maven documentation](https://maven.apache.org/guides/index.html)
 * [Spring Web Starter](https://docs.spring.io/spring-boot/docs/{bootVersion}/reference/htmlsingle/#boot-features-developing-web-applications)
+* [BDD with Cucumber] (https://cucumber.io/)
 
-* [Building a RESTful Web Service](https://spring.io/guides/gs/rest-service/)
-* [Serving Web Content with Spring MVC](https://spring.io/guides/gs/serving-web-content/)
-* [Building REST services with Spring](https://spring.io/guides/tutorials/bookmarks/)
 
